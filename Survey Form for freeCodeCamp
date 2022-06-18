@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <title>Survey Form</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+  </head>
+  <body>
+    <div class="page-container">
+      <header class="header">
+        <h1 id="title">Haskirs Industries Inc. Survey Form</h1>
+        <p id="description">Thank you for taking the survey. Your opinions are important to us!</p>
+      </header>
+      <div class="survey-container">
+        <form id="survey-form">
+          <div class="survey-group-container">
+            <label id="name-label" for="name">Full Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your full name" required/>
+          </div>
+          <div class="survey-group-container">
+            <label id="email-label" for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="survey-group-container">
+            <label id="number-label" for="number">
+              Age (optional)
+            </label>
+            <input type="number" name="number" id="number" min="13" max="120" placeholder="Enter your age">
+          </div>
+          <div class="survey-group-container">
+            <p>What is your education level?</p>
+            <select name="education" id="dropdown" required>
+              <option disabled selected value>Select education level</option>
+              <option value="highschool">High School Degree</option>
+              <option value="bachelors">Bachelor's Degree</option>
+              <option value="masters">Master's Degree</option>
+              <option value="phd">PhD</option>
+            </select>
+          </div>
+          <div class="survey-group-container">
+            <p>Would you recommend our services to your friends and/or family?</p>
+            <label>
+              <input class="input-radio" type="radio" name="recommendation" value="yes" checked/>
+              Yes
+            </label>
+            <label>
+              <input class="input-radio" type="radio" name="recommendation" value="no" checked/>
+              No
+            </label>
+            <label>
+              <input class="input-radio" type="radio" name="recommendation" value="maybe" checked/>
+              Maybe
+            </label>
+          </div>
+          <div class="survey-group-container">
+            <p>Did you encounter any of the following problems while you were using our services?</p>
+            <label>
+              <input class="input-checkbox" type="checkbox" name="problem" value="slow"/>
+              Services were slow.
+            </label>
+            <label>
+              <input class="input-checkbox" type="checkbox" name="problem" value="unsatisfactory"/>
+              Services were unsatisfactory.
+            </label>
+            <label>
+              <input class="input-checkbox" type="checkbox" name="problem" value="rude"/>
+              The personnel were rude to us.
+            </label>
+          </div>
+          <div class="survey-group-container">
+            <p>Do you have any other complaint and/or suggestions?</p>
+            <textarea name="suggestion" id="suggestions" placeholder="Enter your complaints/suggestions..."></textarea>
+          </div>
+          <div class="survey-group-container">
+            <button type="submit" id="submit" class="submit-button">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
